@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="register-page">
+      <h2>Register</h2>
+      <input type="text" id="reg-username" placeholder="Username" />
+      <input type="password" id="reg-password" placeholder="Password" />
+      <button onclick="register()">Register</button>
+      <p id="register-error"></p>
+      <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <div id="login-page" class="hidden">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p id="login-error"></p>
+    </div>
+
+    <div id="stream-selection" class="hidden">
+      <h2>Select Your Stream</h2>
+      <select id="stream-dropdown">
+        <option value="">--Choose--</option>
+        <option value="dataScience">Data Science</option>
+        <option value="webDev">Web Development</option>
+        <option value="machineLearning">Machine Learning</option>
+        <option value="cloudComputing">Cloud Computing</option>
+        <option value="cybersecurity">Cybersecurity</option>
+        <option value="ai">Artificial Intelligence</option>
+        <option value="bigData">Big Data</option>
+        <option value="blockchain">Blockchain</option>
+        <option value="devOps">DevOps</option>
+        <option value="databases">Databases</option>
+      </select>
+      <button onclick="startSelectedQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="quiz-area" class="hidden">
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <p id="result"></p>
+      <button onclick="nextQuestion()">Next</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
